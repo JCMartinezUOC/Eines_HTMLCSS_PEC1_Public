@@ -342,3 +342,22 @@ iframe {
   }
 }
 
+main.detalle figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  justify-items: center;
+  max-height: 200px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.detalle img {
+  filter: invert(1);
+  margin-bottom:5px;
+}
+
