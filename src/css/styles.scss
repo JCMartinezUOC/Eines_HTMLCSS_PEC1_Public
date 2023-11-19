@@ -1,0 +1,326 @@
+// Required Core Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+@import "./media_queries.scss";
+
+@font-face {
+  font-family: 'bodonixtregular';
+  src: url('./webfonts/BodoniXT-webfont.eot');
+  src: url('./webfonts/BodoniXT-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./webfonts/BodoniXT-webfont.woff2') format('woff2'),
+       url('./webfonts/BodoniXT-webfont.woff') format('woff'),
+       url('./webfonts/BodoniXT-webfont.ttf') format('truetype'),
+       url('./webfonts/BodoniXT-webfont.svg#bodonixtregular') format('svg');
+  /*src: url('./webfonts/BodoniXT-webfont.woff') format('woff'),
+       url('./webfonts/BodoniXT-webfont.ttf') format('truetype');
+  */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html
+{
+    height:100%;
+    width:100%;
+}
+
+body {
+  background-color: rgb(0,0,0);
+  color: white;
+  //font: 1.3rem Inconsolata, monospace;
+  font-family: 'bodonixtregular';
+  font-size: 1.3rem;
+
+  @include for-tablet-landscape-up {    
+    font-size: 1.4rem;
+  }
+
+  @include for-desktop-up {    
+    font-size: 1.45rem;
+  }
+
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  //text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-tablet-landscape-up {    
+    width: 90%; 
+ }
+  @include for-desktop-up {    
+    width: 85%; 
+  }
+}
+
+header {
+  margin: 10px;
+}
+
+header .logo {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  max-width: 100%;
+  height: auto;
+  text-transform: uppercase;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: white;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  max-width: 100%;
+  height: auto;
+}
+
+header .logo a:hover, header .logo a:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  //margin: 0 auto;
+  padding-bottom: 30px;
+  //background-color: rgb(255, 255, 255);
+
+  @include for-phone-only {    
+    font-size: 1.2rem;
+ }
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+
+nav a:last-child {
+  margin-right: 0px;
+}
+
+nav a:hover, nav a:active, nav a.current-nav {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+main {
+  background-color: rgb(35,35,35);
+  padding: 50px;
+  padding-top: 10px;
+
+  @include for-phone-only {    
+    padding: 30px;
+    padding-top: 10px;
+ }
+
+  @include for-tablet-landscape-up {    
+    padding: 100px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+ }
+
+}
+
+footer {
+  padding: 20px;
+  padding-top: 5px;
+}
+
+main h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main a {
+  //text-decoration: none;
+  color: rgb(1, 175, 1);
+}
+
+main a:hover, main a:active {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+figure.carousel {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.glide {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.glide__slide {
+  overflow: hidden;
+  text-align: center;
+  //max-height: 600px;
+  //max-width: 600px;
+  //line-height: 450px;
+  color: #fff;
+  //background: rgb(136, 133, 133);
+  background: rgb(0, 0, 0);
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.glide__slide img {
+  object-fit: fill;
+  //height: auto;
+  width: 100%;
+  aspect-ratio: 450 / 600;
+}
+
+/*.glide__bullet {
+  background-color: rgba(155, 155, 155, 0.5);
+  &:hover,
+    &:focus {
+      border: 2px solid black;
+      background-color: rgba(155, 155, 155, 0.5);
+    }
+}
+*/
+.glide__bullets {
+  bottom:-8px;
+}
+
+figcaption {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+figure.carousel figcaption {
+  margin-top: 20px;
+}
+
+figure.video {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+
+  @include for-desktop-up {    
+    width: 65%;
+  }
+}
+
+iframe {
+  border: none;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.categoria_grid {
+  display: grid;
+  justify-content: center;
+  align-items: top;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 70px;
+
+  @include for-tablet-landscape-up {    
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 6%;
+    margin-right: 6%;
+    row-gap: 50px;
+  }
+}
+
+.categoria_grid figure {
+  //background-color: rgb(244, 246, 247);
+  margin: 0;
+  max-width: 150px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  @include for-tablet-landscape-up {    
+    max-width: 250px;
+  }
+}
+
+.categoria_grid figure:hover, .categoria_grid figure:active {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+.categoria_grid figure img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin-bottom: 15px;
+  filter: invert(1);
+  &:hover {
+    filter: none;
+  }
+}
+
+.categoria_grid figure figcaption {
+  text-align: center;
+  font-style: normal;
+  font-size: 1.6rem;
+  @include for-tablet-landscape-up {    
+    margin-top: -5px;
+    font-size: 1.7rem;
+  }
+  @include for-desktop-up {    
+    margin-top: -5px;
+    font-size: 2rem;
+  }
+}
+
