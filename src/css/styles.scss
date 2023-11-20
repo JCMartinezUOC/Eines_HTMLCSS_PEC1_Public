@@ -1,3 +1,9 @@
+// Required Core Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 @import "./media_queries.scss";
 
 @font-face {
@@ -70,7 +76,85 @@ body {
   }
 }
 
-@import "./header.scss";
+header {
+  margin: 10px;
+}
+
+header .logo {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  max-width: 100%;
+  height: auto;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: white;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  max-width: 100%;
+  height: auto;
+}
+
+header .logo a:hover, header .logo a:active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
+
+header cite {
+font-style: normal;
+}
+
+nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  //margin: 0 auto;
+  padding-bottom: 30px;
+  //background-color: rgb(255, 255, 255);
+
+  @include for-phone-only {    
+    font-size: 1.15rem;
+ }
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+}
+
+nav a:last-child {
+  margin-right: 0px;
+}
+
+nav a:hover, nav a:active, nav a.current-nav {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+}
 
 main {
   background-color: rgb(35,35,35);
@@ -117,7 +201,46 @@ figcaption {
   font-style: italic;
 }
 
-@import "./carousel.scss";
+figure.carousel {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+  
+  .glide {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+  }
+  
+  .glide__slide {
+    overflow: hidden;
+    text-align: center;
+    //max-height: 600px;
+    //max-width: 600px;
+    //line-height: 450px;
+    color: #fff;
+    //background: rgb(136, 133, 133);
+    background: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: 900;
+  }
+  
+  .glide__slide img {
+    object-fit: fill;
+    //height: auto;
+    width: 100%;
+    aspect-ratio: 450 / 600;
+  }
+  
+  .glide__bullets {
+    bottom:-8px;
+  }
+
+  figure.carousel figcaption {
+    margin-top: 20px;
+  }
 
 figure.video { // Youtube video
   width: 85%;
@@ -138,7 +261,91 @@ iframe { // Youtube video
   margin-bottom: 15px;
 }
 
-@import "./categoria.scss";
+.categoria_grid {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 70px;
 
-@import "./detalle.scss";
+  @include for-tablet-landscape-up {    
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 6%;
+    margin-right: 6%;
+    row-gap: 50px;
+  }
+}
+
+.categoria_grid figure {
+  margin: 0;
+  max-width: 150px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+  @include for-tablet-landscape-up {    
+    max-width: 250px;
+  }
+}
+
+.categoria_grid figure {
+  filter: invert(1);
+}
+
+.categoria_grid a {
+  color: invert(rgb(1, 175, 1));
+}
+
+.categoria_grid a:hover, .categoria_grid a:active {
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  filter: invert(1);
+  
+}
+
+.categoria_grid figure img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin-bottom: 15px;
+  filter: none;
+}
+
+.categoria_grid figure figcaption {
+  text-align: center;
+  font-style: normal;
+  font-size: 1.6rem;
+  @include for-tablet-landscape-up {    
+    margin-top: -5px;
+    font-size: 1.7rem;
+  }
+  @include for-desktop-up {    
+    margin-top: -5px;
+    font-size: 2rem;
+  }
+}
+
+main.detalle figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  max-height: 200px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.detalle img {
+  filter: invert(1);
+  margin-bottom:5px;
+}
+
+main.detalle figcaption {
+  text-align: center;
+}
 
