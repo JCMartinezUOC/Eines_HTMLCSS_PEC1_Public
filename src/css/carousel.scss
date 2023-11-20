@@ -1,0 +1,46 @@
+// Required Core Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+figure.carousel {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+  
+  .glide {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+  }
+  
+  .glide__slide {
+    overflow: hidden;
+    text-align: center;
+    //max-height: 600px;
+    //max-width: 600px;
+    //line-height: 450px;
+    color: #fff;
+    //background: rgb(136, 133, 133);
+    background: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: 900;
+  }
+  
+  .glide__slide img {
+    object-fit: fill;
+    //height: auto;
+    width: 100%;
+    aspect-ratio: 450 / 600;
+  }
+  
+  .glide__bullets {
+    bottom:-8px;
+  }
+
+  figure.carousel figcaption {
+    margin-top: 20px;
+  }
