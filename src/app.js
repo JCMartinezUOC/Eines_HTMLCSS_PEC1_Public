@@ -25,13 +25,13 @@ if (document.querySelector('.glide')) {
 if (document.title) {
   switch (document.title) {
     case "WikiWeb: Ghost in the Shell (Enlaces)":
-      document.querySelector('a[href*="enlaces.html"]').classList.add("current-nav");
+      document.querySelector('#enlaces-nav-link').classList.add("current-nav");
       break;
     case "WikiWeb: Ghost in the Shell (Presentación)":
-      document.querySelector('a[href*="presentacion.html"]').classList.add("current-nav");
+      document.querySelector('#presentacion-nav-link').classList.add("current-nav");
       break;
     case "WikiWeb: Ghost in the Shell (Categoría)":
-      document.querySelector('a[href*="categoria.html"]').classList.add("current-nav");
+      document.querySelector('#categoria-nav-link').classList.add("current-nav");
       break;
   }
 }
