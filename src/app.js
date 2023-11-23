@@ -21,18 +21,19 @@ if (document.querySelector('.glide')) {
 }
 
 
-const filenameURL = location.href.substring(location.href.lastIndexOf('/')+1);
 
-switch (filenameURL) {
-  case "enlaces.html":
-    document.querySelector('nav a[href*="enlaces.html"]').classList.add("current-nav");
-    break;
-  case "presentacion.html":
-    document.querySelector('nav a[href*="presentacion.html"]').classList.add("current-nav");
-    break;
-  case "categoria.html":
-    document.querySelector('nav a[href*="categoria.html"]').classList.add("current-nav");
-    break;
+if (document.title) {
+  switch (document.title) {
+    case "WikiWeb: Ghost in the Shell (Enlaces)":
+      document.querySelector('nav a[href*="enlaces.html"]').classList.add("current-nav");
+      break;
+    case "WikiWeb: Ghost in the Shell (Presentación)":
+      document.querySelector('nav a[href*="presentacion.html"]').classList.add("current-nav");
+      break;
+    case "WikiWeb: Ghost in the Shell (Categoría)":
+      document.querySelector('nav a[href*="categoria.html"]').classList.add("current-nav");
+      break;
+  }
 }
 
 
