@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide'
 
-if (document.querySelector('.glide') !== null) {
+if (document.querySelector('.glide')) {
   var glide = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
@@ -22,16 +22,16 @@ if (document.querySelector('.glide') !== null) {
 
 
 
-if (document.title !== null) {
+if (document.title) {
   switch (document.title) {
     case "WikiWeb: Ghost in the Shell (Enlaces)":
-      document.querySelector('nav a[href*="enlaces.html"]').classList.add("current-nav");
+      document.querySelector('a[href*="enlaces.html"]').classList.add("current-nav");
       break;
     case "WikiWeb: Ghost in the Shell (Presentación)":
-      document.querySelector('nav a[href*="presentacion.html"]').classList.add("current-nav");
+      document.querySelector('a[href*="presentacion.html"]').classList.add("current-nav");
       break;
     case "WikiWeb: Ghost in the Shell (Categoría)":
-      document.querySelector('nav a[href*="categoria.html"]').classList.add("current-nav");
+      document.querySelector('a[href*="categoria.html"]').classList.add("current-nav");
       break;
   }
 }
