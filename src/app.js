@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide'
 
-if (document.querySelector('.glide')) {
+if (document.querySelector('.glide') !== null) {
   var glide = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
@@ -22,7 +22,7 @@ if (document.querySelector('.glide')) {
 
 
 
-if (document.title) {
+if (document.title !== null) {
   switch (document.title) {
     case "WikiWeb: Ghost in the Shell (Enlaces)":
       document.querySelector('nav a[href*="enlaces.html"]').classList.add("current-nav");
